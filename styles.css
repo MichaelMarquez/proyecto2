@@ -157,3 +157,35 @@ body {
     padding: 45px 0px;
   }
 }
+.dondeestamos {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5%;
+  padding: 5%;
+  background-color: #b9a0d7;
+}
+.nuestrahistoria {
+  overflow: hidden;
+  position: relative;
+}
+.nuestrahistoria img {
+  width: 100%;
+  height: 100%;
+}
+.nuestrahistoria p {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  text-align: justify;
+}
+.nuestrahistoria p::-webkit-scrollbar {
+  width: 7px;
+}
+.nuestrahistoria p::-webkit-scrollbar-thumb {
+  background-color: tan;
+  border-radius: 5px;
+}
