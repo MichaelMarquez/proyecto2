@@ -1,0 +1,215 @@
+$color_1: #000;
+$color_2: #706c6c;
+$color_3: red;
+$color_4: #fff;
+$color_5: #efefef;
+$color_6: aqua;
+$color_7: white;
+$font-family_1: "Chicle", cursive;
+$font-family_2: "Montserrat", sans-serif;
+$font-family_3: "Roboto", sans-serif;
+$font-family_4: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$background-color_1: #e5e5f7;
+$background-color_2: whitesmoke;
+$background-color_3: #0a141d;
+$background-color_4: #0d2033;
+$background-color_5: #0a1a2a;
+$background-color_6: #b9a0d7;
+$background-color_7: tan;
+
+@import "https://fonts.googleapis.com/css2?family=Chicle&family=Montserrat:ital,wght@1,500;1,900&family=Roboto:ital,wght@1,300;1,400;1,500&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-family_1;
+  font-family: $font-family_2;
+  font-family: $font-family_3;
+}
+.fondodereservas {
+  background-color: $background-color_1;
+  opacity: 1;
+  background-image: repeating-linear-gradient(
+      45deg,
+      #b9a0d7 25%,
+      transparent 25%,
+      transparent 75%,
+      #b9a0d7 75%,
+      #b9a0d7
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #b9a0d7 25%,
+      #e5e5f7 25%,
+      #e5e5f7 75%,
+      #b9a0d7 75%,
+      #b9a0d7
+    );
+  background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
+  display: flex;
+  min-height: 100vh;
+}
+.form {
+  background-color: $background-color_2;
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 4.5rem 3em;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgb(0 0 0/ 30%);
+}
+.form__title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.form__paragraph {
+  font-weight: 300;
+}
+.form__link {
+  font-weight: 400;
+  color: $color_1;
+}
+.form__container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+.form__group {
+  position: relative;
+  --color: #575757;
+}
+.form__input {
+  width: 100%;
+  background: none;
+  color: $color_2;
+  font-size: 1rem;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+  font-family: $font-family_4;
+}
+.list-group {
+  text-align: center;
+  color: $color_3;
+}
+.list-group-item {
+  color: $color_3;
+  text-align: left;
+}
+.navbar {
+  background-color: $background-color_2;
+  padding: 0;
+}
+.main {
+  padding: 0;
+}
+.favicon {
+  max-width: 15%;
+}
+.pie-pagina {
+  width: 100%;
+  background-color: $background-color_3;
+  .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3.1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    .box {
+      figure {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 250px;
+        }
+      }
+      h2 {
+        color: $color_4;
+        margin-bottom: 25px;
+        font-size: 20px;
+      }
+      p {
+        color: $color_5;
+        margin-bottom: 10px;
+      }
+      .red-social {
+        a {
+          display: inline-block;
+          text-decoration: none;
+          width: 45px;
+          height: 45px;
+          line-height: 45px;
+          color: $color_4;
+          margin-right: 10px;
+          background-color: $background-color_4;
+          text-align: center;
+          transition: all 300ms ease;
+          &:hover {
+            color: $color_6;
+          }
+        }
+      }
+    }
+  }
+  .grupo-2 {
+    background-color: $background-color_5;
+    padding: 15px 10px;
+    text-align: center;
+    color: $color_4;
+    small {
+      font-size: 15px;
+    }
+  }
+}
+.dondeestamos {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5%;
+  padding: 5%;
+  background-color: $background-color_6;
+}
+.nuestrahistoria {
+  overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    font-size: 2rem;
+    color: $color_7;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    text-align: justify;
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background-color_7;
+      border-radius: 5px;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .pie-pagina {
+    .grupo-1 {
+      width: 90%;
+      grid-template-columns: repeat(3.1fr);
+      grid-gap: 50px;
+      padding: 45px 0px;
+    }
+  }
+}
