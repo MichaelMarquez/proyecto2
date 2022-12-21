@@ -14,7 +14,22 @@ body {
 .fondodereservas {
   background-color: #e5e5f7;
   opacity: 1;
-  background-image: repeating-linear-gradient(45deg, #b9a0d7 25%, transparent 25%, transparent 75%, #b9a0d7 75%, #b9a0d7), repeating-linear-gradient(45deg, #b9a0d7 25%, #e5e5f7 25%, #e5e5f7 75%, #b9a0d7 75%, #b9a0d7);
+  background-image: repeating-linear-gradient(
+      45deg,
+      #b9a0d7 25%,
+      transparent 25%,
+      transparent 75%,
+      #b9a0d7 75%,
+      #b9a0d7
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #b9a0d7 25%,
+      #e5e5f7 25%,
+      #e5e5f7 75%,
+      #b9a0d7 75%,
+      #b9a0d7
+    );
   background-position: 0 0, 20px 20px;
   background-size: 40px 40px;
   display: flex;
@@ -65,7 +80,8 @@ body {
   border: none;
   outline: none;
   border-bottom: 1px solid var(--color);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .list-group {
@@ -159,20 +175,30 @@ body {
 .nuestrahistoria {
   overflow: hidden;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 .nuestrahistoria img {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 .nuestrahistoria p {
+  font-size: calc(1.5vh + 0.7em);
+  color: white;
+  position: absolute;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  top: 30%;
+  padding: 5%;
+}
+.nuestrahistoria h1 {
   font-size: 2rem;
   color: white;
   position: absolute;
-  top: 30%;
+  text-align: center;
+  top: 20%;
   left: 40%;
-  transform: translate(-50%, -50%);
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  text-align: justify;
 }
 .nuestrahistoria p::-webkit-scrollbar {
   width: 7px;
@@ -180,6 +206,12 @@ body {
 .nuestrahistoria p::-webkit-scrollbar-thumb {
   background-color: tan;
   border-radius: 5px;
+}
+.titulodelmenu {
+  text-align: center;
+  padding: 2px;
+  text-decoration: underline;
+  color: #052962;
 }
 
 @media screen and (max-width: 800px) {
